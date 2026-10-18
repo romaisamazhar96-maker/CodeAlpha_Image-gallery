@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelGallery-Photo Discovery UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-camera-retro"></i>PixelGallery
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Favourites</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" title="Toggle Theme"><i class="fa-regular fa-sun"></i></button>
+            <button class="signup-btn" title="Favourites"><i class="fa-regular fa-heart"></i>
+            </button>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Discover Stunning <span>Images</span></h1>
+            <p>Explore for your favourite images,explore stunning visuals from talented photographers around the
+                world,and download the high-quality versions.</p>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search images...">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="cities">Cities</button>
+                <button class="filter-btn" data-filter="people">People</button>
+                <button class="filter-btn" data-filter="animals">Animals</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="flowers">Flowers</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+            </div>
+        </div>
+    </section>
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h2>Popular Photos</h2>
+            <div class="view-toggle">
+                <button class="view-btn active"><i class="fa-solid fa-border-all"></i></button>
+                <button class="view-btn"><i class="fa-solid fa-list"></i></button>
+            </div>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category="people" data-title="Woman in Hat" data-author="Artem Kovalenko">
+                <img src="woman.jpg" alt="Woman in Hat">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="Vintage Car" data-author="Artem Kovalenko">
+                <img src="car.jpg" alt="Vintage Car">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="food" data-title="Fresh Oranges" data-author="Artem Kovalenko">
+                <img src="oranges.jpg" alt="Fresh Oranges">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="people" data-title="Shadow Portrait" data-author="Artem Kovalenko">
+                <img src="shadow.jpg" alt="Shadow Portrait">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="travel" data-title="Coastal Village" data-author="Artem Kovalenko">
+                <img src="village.jpg" alt="Coastal Village">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="Old Alleyway" data-author="Artem Kovalenko">
+                <img src="alleyway.jpg" alt="Old Alleyway">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Mountain Lake" data-author="Artem Kovalenko">
+                <img src="lake.jpg" alt="Mountain Lake">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology" data-title="Computer Setup"
+                data-author="Artem Kovalenko">
+                <img src="computer.jpg" alt="Computer Setup">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="flowers" data-title="lillies" data-author="Artem Kovalenko">
+                <img src="lillies.jpg" alt="lillies">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="buildings" data-author="Artem Kovalenko">
+                <img src="buildings.jpg" alt="buildings">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="cat" data-author="Artem Kovalenko">
+                <img src="cat.jpg" alt="cat">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="food" data-title="salad" data-author="Artem Kovalenko">
+                <img src="salad.jpg" alt="salad">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="technology" data-title="techteam" data-author="Artem Kovalenko">
+                <img src="techteam.jpg" alt="techteam">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="people" data-title="crowdedplaces" data-author="Artem Kovalenko">
+                <img src="crowdedplaces.jpg" alt="Crowded Places">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="dog" data-author="Artem Kovalenko">
+                <img src="dog.jpg" alt="Dog">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="beaches" data-author="Artem Kovalenko">
+                <img src="beaches.jpg" alt="Beaches">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="travel" data-title="villages" data-author="Artem Kovalenko">
+                <img src="villages.jpg" alt="Villages">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="food" data-title="fruits" data-author="Artem Kovalenko">
+                <img src="fruits.jpg" alt="Fruits">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="downtown" data-author="Artem Kovalenko">
+                <img src="downtown.jpg" alt="Downtown">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="people" data-title="family" data-author="Artem Kovalenko">
+                <img src="family.jpg" alt="Family">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="travel" data-title="places" data-author="Artem Kovalenko">
+                <img src="places.jpg" alt="Places">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="vehicle" data-author="Artem Kovalenko">
+                <img src="vehicle.jpg" alt="Vehicle">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="food" data-title="food" data-author="Artem Kovalenko">
+                <img src="food.jpg" alt="Food">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="animals" data-author="Artem Kovalenko">
+                <img src="animals.jpg" alt="animals">
+                <div class="overlay">
+                    <div class="author-info"><i class="fa-solid fa-camera"></i>Artem Kovalenko</div>
+                    <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="load-more-wrapper">
+            <button class="load-more-btn"><i class="fa-solid fa-arrows-rotate"></i>Load More</button>
+        </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeBtn">&times;</span>
+        <button class="lightbox-arrow prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage" alt="Popup View">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-arrow next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <footer class="footer">
+        <div class="footer-logo">
+            <i class="fa-solid fa-camera-retro"></i> PixelGallery
+        </div>
+        <div class="footer-links">
+            <a href="#"><i class="fa-regular fa-heart"></i>Explore</a>
+            <span>•</span>
+            <a href="#">Discover</a>
+            <span>•</span>
+            <a href="#">Download</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
